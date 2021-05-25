@@ -1,70 +1,140 @@
-# Getting Started with Create React App
+## 演示地址：<a href="http://47.110.144.145:81/" target="_blank">Flex容器属性演示</a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+`Flex`是`Flexible Box`的缩写，表示**弹性布局**，用来为盒子模型提供最大的灵活性。
 
-## Available Scripts
+任何一个容器都可以设定为`flex`布局：
 
-In the project directory, you can run:
+```css
+.box {
+    display: flex;
+}
+```
 
-### `yarn start`
+设定为`flex`布局之后，**子元素**的`float`、`clear`和`vertical-align`属性将**失效**！
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+采用`flex`布局的容器叫作`flex`容器，简称**容器**。**容器**里的所有子元素成为`flex`项目，简称**项目**。
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+采用了`flex`布局以后，**容器**和**项目**分别有各自的属性。
 
-### `yarn test`
+为了更好地理解采用了`flex`布局后，**容器**不同属性的作用，我写了一个实时演示的小应用，可以很直观地演示**容器**的不同属性的作用。
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+上方代表**容器属性**，中间按钮表示**属性值**，下方是展示区。因为`flex-flow`是`flex-direction`属性和`flex-wrap`属性的连写方式（后文会介绍），故将`flex-direction`属性和`flex-wrap`属性放到了`flex-flow`下方。
 
-### `yarn build`
+![](https://jack-img.oss-cn-hangzhou.aliyuncs.com/img/20210525164325.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+接下来分别介绍各个容器属性、项目属性的作用。
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# 1. 容器属性
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 1. flex-direction
 
-### `yarn eject`
+`flex-direction`决定**主轴**的方向，有4种取值：
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- `row`：默认，水平方向，**左→右**排列
+- `row-reverse`：水平方向，**右→左**排列
+- `column`：垂直方向，**上→下**排列
+- `column-reverse`：垂直方向，**下→上**排列
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 2. flex-wrap
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`flex-wrap`决定**项目**在一条轴线**排不下**时如何换行，有3种取值：
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- `nowrap`：默认，不换行
+- `wrap`：换行，第一行在上方
+- `wrap-reverse`：换行，第一行在下方
 
-## Learn More
+## 3. flex-flow
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`flex-flow`是`flex-direction`属性和`flex-wrap`属性的连写方式，相当于两个属性简写成一个属性了。
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+默认值：`flex-wrap: row nowrap;`
 
-### Code Splitting
+## 4. justify-content
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+`justify-content`定义**项目**在主轴上的**对齐方式**，有6种取值：
 
-### Analyzing the Bundle Size
+- `flex-start`：默认，左对齐（主轴水平）/上对齐（主轴垂直）
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- `flex-end`：右对齐（主轴水平）/下对齐（主轴垂直）
 
-### Making a Progressive Web App
+- `center`：居中
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- `space-between`：两端对齐，项目之间间隔相等
 
-### Advanced Configuration
+  ![](https://jack-img.oss-cn-hangzhou.aliyuncs.com/img/20210525155422.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- `space-around`：每个**项目两侧间隔**相等
 
-### Deployment
+  ![](https://jack-img.oss-cn-hangzhou.aliyuncs.com/img/20210525155727.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- `space-evenly`：每个**项目之间**及**两端**的间隔都相等
 
-### `yarn build` fails to minify
+  ![](https://jack-img.oss-cn-hangzhou.aliyuncs.com/img/20210525155331.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+画得没那么标准，但应该能说明问题。使用<a href="http://47.110.144.145:81/" target="_blank">Flex容器属性演示</a>来动态展示一下，能更好理解。
+
+## 5. align-items
+
+`align-items`定义项目在交叉轴（默认方向从上到下）上的对齐方式，有5种取值：
+
+- `flex-start`：交叉轴的**起点**对齐
+- `flex-end`：交叉轴的**终点**对齐
+- `center`：交叉轴的**中心**对齐
+- `baseline`：项目第一行文字的基线对齐
+- `stretch`：默认，项目未设置固定高度时，将被拉伸以适应容器
+
+## 6. align-content
+
+`align-content`定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用，有6种取值：
+
+- `flex-start`：交叉轴的**起点**对齐
+- `flex-end`：交叉轴的**终点**对齐
+- `center`：交叉轴的**中心**对齐
+- `space-between`：与**交叉轴两端**对齐，**轴线之间的间隔**平均分布等
+- `space-around`：每根轴线两侧的间隔都相
+- `stretch`：默认，轴线占满整个交叉轴
+
+# 2. 项目属性
+
+## 1. order
+
+`order`定义项目的排列顺序。
+
+值为**整数**，数值越小，排列越靠前，**默认为0**。
+
+## 2. flex-grow
+
+`flex-grow`定义项目的伸缩比例，按照该比例给项目分配空间。
+
+值为**整数**，数值**越大**，项目占据空间**越大**，**默认为0**。
+
+## 3. flex-shrink
+
+`flex-shrink`定义项目的收缩比例，按照该比例给项目分配空间。
+
+值为**整数**，数值**越大**，项目占据空间**越小**，**默认为1**。
+
+## 4. flex-basis
+
+`flex-basis`定义在分配多余空间之前，项目占据的主轴空间。浏览器根据这个属性，计算主轴是否有多余空间。
+
+默认为`auto`，即项目的**原始尺寸**。
+
+也可设置和`width`或`height`属性一样的值，则项目将占据**固定空间**。
+
+## 5. flex
+
+`flex`是`flex-grow`、`flex-shrink`、`flex-basis`的连写方式，相当于3个属性简写成一个属性了。
+
+默认值：`flex: 0 1 auto;`不伸缩，如果容器空间不足则等比例收缩。
+
+## 6. align-self
+
+`align-self`定义**单个项目**的对齐方式，可覆盖`align-items`属性，有6种取值：
+
+- `auto`：默认值，继承父元素的`align-items`属性，如果没有父元素，则等同于`stretch`
+- `flex-start`：交叉轴的**起点**对齐
+- `flex-end`：交叉轴的**终点**对齐
+- `center`：交叉轴的**中心**对齐
+- `baseline`：项目第一行文字的基线对齐
+- `stretch`：未设置固定高度时，将占满整个容器
