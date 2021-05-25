@@ -1,0 +1,167 @@
+.head {
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 36px;
+    color: #fff;
+}
+
+.btnBox {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+    /* background-color: #ffffff; */
+    height: 360px;
+}
+.flowName,
+.name,
+.wrap,
+.direction {
+    background-color: rgb(202, 238, 40);
+    height: 40px;
+    line-height: 40px;
+}
+
+.propFlow {
+    text-align: center;
+    flex: 2;
+}
+
+.prop {
+    text-align: center;
+    flex: 1;
+}
+
+.flowValue {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 禁止选中 */
+/* .value,
+.name,
+.flowName,
+.direction,
+.wrap {
+    user-select: none;
+} */
+
+.value {
+    background-color: rgb(19, 226, 216);
+    border-radius: 10px;
+    height: 0;
+    overflow: hidden;
+    width: 0;
+}
+
+.directionValueBox,
+.wrapValueBox,
+.valueBox {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+.directionValueBox,
+.wrapValueBox {
+    height: 274px;
+}
+
+.valueBox {
+    height: 320px;
+    align-items: center;
+}
+
+.direction,
+.wrap {
+    margin-top: 6px;
+    border-radius: 10px;
+}
+
+.inputBox {
+    width: 180px;
+    height: 40px;
+    background-color: rgb(64, 183, 212);
+    border-radius: 10px;
+    /* user-select: none; */
+    line-height: 40px;
+}
+
+#checked {
+    background-color: rgb(238, 78, 29);
+    color: #fff;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 0.7) inset;
+}
+
+.controlBox {
+    position: relative;
+    padding-left: 20px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 20px;
+    user-select: none;
+}
+
+.addBtn,
+.minBtn,
+.widenBtn,
+.narrowBtn {
+    position: absolute;
+    width: 40px;
+    height: 24px;
+    background-color: rgb(92, 201, 70);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 16px;
+    color: #000;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.addBtn {
+    left: 240px;
+}
+.minBtn {
+    left: 290px;
+}
+.widenBtn {
+    left: 540px;
+}
+.narrowBtn {
+    left: 590px;
+}
+
+.addBtn:hover,
+.minBtn:hover,
+.widenBtn:hover,
+.narrowBtn:hover {
+    background-color: rgb(228, 60, 30);
+    color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.showBox {
+    height: 450px;
+    background-color: rgb(40, 219, 94);
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 0 16px #000 inset;
+}
+
+.itemBox {
+    /* width: 100px; */
+    /* height: 100px; */
+    background-color: rgb(36, 147, 238);
+    border-radius: 20px;
+    border: 2px solid #000;
+    color: #fff;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
