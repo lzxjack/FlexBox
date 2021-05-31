@@ -4,8 +4,10 @@ import './App.css';
 
 const App = () => {
     return (
-        <div className="centerBox">
-            <FlexBox />
+        <div className="bg">
+            <div className="centerBox">
+                <FlexBox />
+            </div>
         </div>
     );
 };
