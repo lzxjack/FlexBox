@@ -14,3 +14,7 @@ html {
 div {
     box-sizing: content-box;
 }
+
+body {
+    background-color: #2b2b2b;
+}

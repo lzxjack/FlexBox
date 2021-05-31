@@ -3,6 +3,7 @@
     text-align: center;
     line-height: 60px;
     font-size: 36px;
+    /* font-weight: 700; */
     color: #fff;
 }
 
@@ -10,6 +11,7 @@
     display: flex;
     justify-content: space-around;
     font-size: 20px;
+    font-weight: 700;
     /* background-color: #ffffff; */
     height: 360px;
 }
