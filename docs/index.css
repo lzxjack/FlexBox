@@ -1,0 +1,16 @@
+div,
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#root,
+body,
+html {
+    height: 100%;
+}
+
+div {
+    box-sizing: content-box;
+}
