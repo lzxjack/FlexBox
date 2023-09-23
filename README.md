@@ -1,4 +1,4 @@
-## 😃😃😃演示地址：<a href="https://flex-box-4g13g81rf10ef474-1304393382.ap-shanghai.app.tcloudbase.com/" target="_blank">Flex容器属性演示</a>
+## 😃😃😃 演示地址：<a href="http://124.220.38.92:86" target="_blank">Flex 容器属性演示</a>
 
 `Flex`是`Flexible Box`的缩写，表示**弹性布局**，用来为盒子模型提供最大的灵活性。
 
@@ -6,7 +6,7 @@
 
 ```css
 .box {
-    display: flex;
+  display: flex;
 }
 ```
 
@@ -20,7 +20,7 @@
 
 上方代表**容器属性**，中间按钮表示**属性值**，下方是展示区。因为`flex-flow`是`flex-direction`属性和`flex-wrap`属性的连写方式（后文会介绍），故将`flex-direction`属性和`flex-wrap`属性放到了`flex-flow`下方。
 
-![](https://jack-img.oss-cn-hangzhou.aliyuncs.com/img/20210525164325.png)
+![](https://img.lzxjack.top:99/20210525164325.png)
 
 接下来分别介绍各个容器属性、项目属性的作用。
 
@@ -28,16 +28,16 @@
 
 ## 1. flex-direction
 
-`flex-direction`决定**主轴**的方向，有4种取值：
+`flex-direction`决定**主轴**的方向，有 4 种取值：
 
-- `row`：默认，水平方向，**左→右**排列
-- `row-reverse`：水平方向，**右→左**排列
-- `column`：垂直方向，**上→下**排列
-- `column-reverse`：垂直方向，**下→上**排列
+- `row`：默认，水平方向，**左 → 右**排列
+- `row-reverse`：水平方向，**右 → 左**排列
+- `column`：垂直方向，**上 → 下**排列
+- `column-reverse`：垂直方向，**下 → 上**排列
 
 ## 2. flex-wrap
 
-`flex-wrap`决定**项目**在一条轴线**排不下**时如何换行，有3种取值：
+`flex-wrap`决定**项目**在一条轴线**排不下**时如何换行，有 3 种取值：
 
 - `nowrap`：默认，不换行
 - `wrap`：换行，第一行在上方
@@ -51,7 +51,7 @@
 
 ## 4. justify-content
 
-`justify-content`定义**项目**在主轴上的**对齐方式**，有6种取值：
+`justify-content`定义**项目**在主轴上的**对齐方式**，有 6 种取值：
 
 - `flex-start`：默认，左对齐（主轴水平）/上对齐（主轴垂直）
 
@@ -61,21 +61,21 @@
 
 - `space-between`：两端对齐，项目之间间隔相等
 
-  ![](https://jack-img.oss-cn-hangzhou.aliyuncs.com/img/20210525155422.png)
+  ![](https://img.lzxjack.top:99/20210525155422.png)
 
 - `space-around`：每个**项目两侧间隔**相等
 
-  ![](https://jack-img.oss-cn-hangzhou.aliyuncs.com/img/20210525155727.png)
+  ![](https://img.lzxjack.top:99/20210525155727.png)
 
 - `space-evenly`：每个**项目之间**及**两端**的间隔都相等
 
-  ![](https://jack-img.oss-cn-hangzhou.aliyuncs.com/img/20210525155331.png)
+  ![](https://img.lzxjack.top:99/20210525155331.png)
 
-画得没那么标准，但应该能说明问题。使用<a href="http://47.110.144.145:81/" target="_blank">Flex容器属性演示</a>来动态展示一下，能更好理解。
+画得没那么标准，但应该能说明问题。使用<a href="http://47.110.144.145:81/" target="_blank">Flex 容器属性演示</a>来动态展示一下，能更好理解。
 
 ## 5. align-items
 
-`align-items`定义项目在交叉轴（默认方向从上到下）上的对齐方式，有5种取值：
+`align-items`定义项目在交叉轴（默认方向从上到下）上的对齐方式，有 5 种取值：
 
 - `flex-start`：交叉轴的**起点**对齐
 - `flex-end`：交叉轴的**终点**对齐
@@ -85,7 +85,7 @@
 
 ## 6. align-content
 
-`align-content`定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用，有6种取值：
+`align-content`定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用，有 6 种取值：
 
 - `flex-start`：交叉轴的**起点**对齐
 - `flex-end`：交叉轴的**终点**对齐
@@ -100,19 +100,19 @@
 
 `order`定义项目的排列顺序。
 
-值为**整数**，数值越小，排列越靠前，**默认为0**。
+值为**整数**，数值越小，排列越靠前，**默认为 0**。
 
 ## 2. flex-grow
 
 `flex-grow`定义项目的伸缩比例，按照该比例给项目分配空间。
 
-值为**整数**，数值**越大**，项目占据空间**越大**，**默认为0**。
+值为**整数**，数值**越大**，项目占据空间**越大**，**默认为 0**。
 
 ## 3. flex-shrink
 
 `flex-shrink`定义项目的收缩比例，按照该比例给项目分配空间。
 
-值为**整数**，数值**越大**，项目占据空间**越小**，**默认为1**。
+值为**整数**，数值**越大**，项目占据空间**越小**，**默认为 1**。
 
 ## 4. flex-basis
 
@@ -124,13 +124,13 @@
 
 ## 5. flex
 
-`flex`是`flex-grow`、`flex-shrink`、`flex-basis`的连写方式，相当于3个属性简写成一个属性了。
+`flex`是`flex-grow`、`flex-shrink`、`flex-basis`的连写方式，相当于 3 个属性简写成一个属性了。
 
 默认值：`flex: 0 1 auto;`不伸缩，如果容器空间不足则等比例收缩。
 
 ## 6. align-self
 
-`align-self`定义**单个项目**的对齐方式，可覆盖`align-items`属性，有6种取值：
+`align-self`定义**单个项目**的对齐方式，可覆盖`align-items`属性，有 6 种取值：
 
 - `auto`：默认值，继承父元素的`align-items`属性，如果没有父元素，则等同于`stretch`
 - `flex-start`：交叉轴的**起点**对齐
